@@ -3,4 +3,4 @@
 
 2. EDA in python
 
-3. Beeswan plot in python
+3. Beeswam plot in python
