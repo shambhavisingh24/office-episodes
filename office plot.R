@@ -12,8 +12,8 @@ summary(office)
 
 #theme
 theme_set(theme_minimal())
-theme <- theme_update(text = element_text(family = "Rubik", size = 13),
-                      plot.title = element_text("College", size = 40, color = "gray20"),
+theme <- theme_update(text = element_text(size = 13),
+                      plot.title = element_text(size = 40, color = "gray20"),
                       plot.title.position = "plot",
                       axis.text = element_text(size = 16),
                       axis.title.x = element_text(size = 20),
@@ -29,7 +29,6 @@ base <- ggplot(data = community,aes(fct_rev(season_name),rating))+
   geom_rect(data = community, xmin = 1.5,
             xmax = 2.5, ymin = 6, ymax = 10,fill = "#EBEBEB",alpha = 0.1) +
   geom_quasirandom(aes(fct_rev(season_name),rating,color = season_name),size=4,alpha=0.7,show.legend = FALSE) +
-  #geom_image(data = label_eps,aes(image = image),, asp = 1.5) +
   scale_y_continuous(limits = c(6,10),expand = c(0,0)) +
   scale_color_paletteer_d("ggsci::default_jco") +
   coord_flip()
